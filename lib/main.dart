@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:study_planner/provider/task_provider.dart';
 import 'package:study_planner/ui/screens/app_shell.dart';
 import 'package:study_planner/ui/theme/app_theme.dart';
 
@@ -11,11 +13,16 @@ class StudyPlannerApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Study Planner',
-      theme: AppTheme.light,
-      home: const AppShell(),
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider<TaskProvider>(create: (_) => TaskProvider()),
+      ],
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        title: 'Study Planner',
+        theme: AppTheme.light,
+        home: const AppShell(),
+      ),
     );
   }
 }
