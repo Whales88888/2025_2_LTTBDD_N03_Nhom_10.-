@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:study_planner/ui/screens/home_screen.dart';
+import 'package:study_planner/ui/screens/app_shell.dart';
+import 'package:study_planner/ui/theme/app_theme.dart';
 
 void main() {
   runApp(const StudyPlannerApp());
@@ -13,10 +14,8 @@ class StudyPlannerApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Study Planner',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
-      ),
-      home: const HomeScreen(),
+      theme: AppTheme.light,
+      home: const AppShell(),
     );
   }
 }
