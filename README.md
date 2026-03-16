@@ -1,3 +1,7 @@
+# Nhóm 10 
+# Nguyễn Thị Minh Hằng - 23010520
+# Phùng Thị Hạ Lam - 23010842
+
 # study_planner
 
 A new Flutter project.
